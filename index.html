@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <title> javascript </title>
+    <style>
+        body {
+            background: url('https://media.istockphoto.com/id/1667448660/vector/double-abstract-green-technology-wave-flow-of-particles-big-data-transfer-visualization.jpg?s=612x612&w=0&k=20&c=01-ldGNw1lsHyc33pCTO4dBhikrZkNJh9aJRhVoE8rI=');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+
+      
+        }
+    
+        
+        .text-white {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            margin-top: 120px;
+        }
+    
+    </style>
+    </head>
+    <body>
+        
+        <div class="text-white">
+        <h1>JavaScript</h1>
+        <p id="history"></p>
+       <div id="Id1" style="color: white;"></div>
+    <div id="Id2" style="color: white;"></div>
+    <div id="Id3" style="color: white;"></div>
+
+        </div>
+    <script>
+        let text1 = "JavaScript was created in May 1995 by Brendan Eich at Netscape in just ten days to make web pages interactive.";
+        let text2 = "In 1997, it was standardized as ECMAScript, though early progress was slowed by browser compatibility issues.";
+        let text3 = "From 2009 onward, JavaScript expanded beyond the browser through Node.js, while updates like ES6 and frameworks such as React, Angular, and Vue.";
+    
+
+        function typeWriter(id, text, speed) {
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    document.getElementById(id).innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        typeWriter('Id1', text1 + ' Originally called Mocha and later LiveScript, it was renamed JavaScript to take advantage of Java’s popularity.', 15);
+        typeWriter('Id2', text2 + ' The language experienced a major revival in the mid-2000s with the introduction of AJAX and Google’s high-performance V8 engine.', 25);
+        typeWriter('Id3', text3 + ' js enabled modern web development. Today, JavaScript continues to evolve with technologies like TypeScript, WebAssembly, and its growing use in areas such as machine learning and serverless computing.', 15); 
+
+    </script>
+
+         
+            
+
+
+            
+
+        
+       
+        
+    </body>
+</html>  
